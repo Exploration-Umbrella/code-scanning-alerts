@@ -1,0 +1,16 @@
+name: 'Fetch Code Scanning Alerts'
+description: 'Fetches GitHub data and reports in the Actions summary'
+inputs:
+  org_name:
+    description: 'GitHub organization name'
+    required: true
+  repo_name:
+    description: 'GitHub repository name'
+    required: true
+  github_token:
+    description: 'GitHub token for authentication'
+    required: true
+
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
